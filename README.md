@@ -10,7 +10,7 @@ Given a record of every transaction during a three month period, calculate the r
 
  
 
-·         Use Spring Boot or Reat
+·         Use Spring Boot or React
 
 ·         Make up a data set to best demonstrate your solution
 
