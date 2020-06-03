@@ -1,6 +1,5 @@
-import React from "react";
-import styled from "styled-components";
-import shortid from "shortid";
+import React from 'react';
+import styled from 'styled-components';
 
 export const Grid = styled.div``;
 export const Headers = styled.span`
@@ -33,31 +32,31 @@ const ResponsiveGrid = (props) => {
   //   console.log(columns);
   //   console.log(data);
   return (
-    <div className="ResponsiveGrid">
+    <div className='ResponsiveGrid'>
       <Grid>
         <h1>
           <Title>{title}</Title>
         </h1>
         <Row>
-          {columns.map((column) => {
+          {columns.map((column, i) => {
             return (
-              <Col size={size} key={shortid.generate()}>
+              <Col size={size} key={i}>
                 <Headers>{column.Header}</Headers>
               </Col>
             );
           })}
         </Row>
-        {data.map((row) => {
+        {data.map((row, i) => {
           return (
-            <Row key={shortid.generate()}>
-              {row.name ? <Col size={size}>{row.name}</Col> : ""}
-              {row.month ? <Col size={size}>{row.month}</Col> : ""}
+            <Row key={i}>
+              {row.name ? <Col size={size}>{row.name}</Col> : ''}
+              {row.month ? <Col size={size}>{row.month}</Col> : ''}
               {row.numTransactions ? (
                 <Col size={size}>{row.numTransactions}</Col>
               ) : (
-                ""
+                ''
               )}
-              {row.points ? <Col size={size}>{row.points}</Col> : ""}
+              {row.points ? <Col size={size}>{row.points}</Col> : ''}
             </Row>
           );
         })}
